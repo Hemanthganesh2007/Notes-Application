@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #cf9aff, #95c0ff);
+    color: #fff;
+    padding-top: 4%;
+    padding-left: 10%;
+    padding-bottom: 50px;
+}
+
+/* notes heading */
+.container h1 {
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    font-weight: 600;
+    gap: 10px;
+}
+
+.container h1 img {
+    width: 60px;
+    border-radius: 70%;
+}
+
+/* create note button */
+.container > .btn {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: #fff;
+    background: linear-gradient(#9418fd, #571094);
+    outline: 0;
+    border: 0;
+    border-radius: 40px;
+    padding: 15px 25px;
+    margin: 30px 0 20px;
+    cursor: pointer;
+}
+
+.container > .btn img {
+    width: 30px;
+    margin-right: 8px;
+}
+
+/* note box */
+.input-box {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    min-height: 150px;
+    background: white;
+    color: #333;
+    padding: 20px;
+    padding-bottom: 55px;
+    margin: 20px 0;
+    outline: none;
+    border-radius: 10px;
+}
+
+/* delete icon */
+.delete-icon {
+    width: 25px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+/* pin button */
+.pin-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    background: #9418fd;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 7px 14px;
+    cursor: pointer;
+    font-size: 13px;
+    z-index: 10;
+}
+
+.pin-btn:hover {
+    background: #571094;
+}
+
+.input-box.pinned {
+    border: 3px solid #9418fd;
+}
+
+/* logout button */
+.logout-btn {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    padding: 10px 20px;
+    background: linear-gradient(#9418fd, #571094);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.logout-btn:hover {
+    opacity: 0.8;
+}
+
+/* mobile view */
+@media (max-width: 600px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    .container h1 {
+        font-size: 28px;
+    }
+
+    .container h1 img {
+        width: 50px;
+    }
+
+    .input-box {
+        max-width: 100%;
+    }
+
+    .logout-btn {
+        top: 25px;
+        right: 20px;
+    }
+}
+
+/* theme button */
+.theme-btn {
+    position: absolute;
+    top: 30px;
+    right: 130px;
+    padding: 10px 15px;
+    background: white;
+    color: #571094;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* dark mode */
+.container.dark-mode {
+    background: linear-gradient(135deg, #121212, #292929);
+}
+
+.dark-mode .input-box {
+    background: #333;
+    color: white;
+}
+
+.dark-mode .theme-btn {
+    background: #fff;
+    color: #333;
+}
+
+@media (max-width: 600px) {
+    .theme-btn {
+        top: 75px;
+        right: 20px;
+    }
+}
+
+.note-text {
+    width: 100%;
+    min-height: 80px;
+    outline: none;
+    color: inherit;
+    cursor: text;
+}
